@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Schemes</title>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="#" onclick="showSection('home')" class="edrd">Yojana Darpan</a></h1>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#checker" onclick="showSection('checker')">Eligibility Checker</a></li>
+                <li><a href="#dashboard" onclick="showSection('dashboard')">Scheme Dashboard</a></li>
+                <li><a href="#guide" onclick="showSection('guide')">Compliance Guide</a></li>
+                <li><a href="#faq" onclick="showSection('faq')">FAQ</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+                <li><button onclick="toggleLanguage()">Toggle Language (EN/HI)</button></li>
+                <li><button onclick="showLogin()">Login</button></li>
+                <li><button onclick="showRegister()">Register</button></li>
+                <li id="logoutNavItem" style="display: none;"><button onclick="logout()">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="active">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2 data-en="Discover the Perfect Schemes for Your Business" data-hi="अपने व्यवसाय के लिए सही योजनाएं खोजें">Discover the Perfect Schemes for Your Business</h2>
+                    <p data-en="Find government schemes, subsidies, and grants you're eligible for in seconds. Get step-by-step compliance guidance and simplify your application process." data-hi="सेकंडों में उन सरकारी योजनाओं, सब्सिडी और अनुदानों को खोजें जिनके लिए आप पात्र हैं। चरण-दर-चरण अनुपालन मार्गदर्शन प्राप्त करें और अपनी आवेदन प्रक्रिया को सरल बनाएं।">Find government schemes, subsidies, and grants you're eligible for in seconds. Get step-by-step compliance guidance and simplify your application process.</p>
+                    <button onclick="showSection('checker')" data-en="Find My Schemes →" data-hi="मेरी योजनाएं खोजें →">Find My Schemes →</button>
+                    <button onclick="showSection('guide')" data-en="Compliance Guide" data-hi="अनुपालन गाइड">Compliance Guide</button>
+                </div>
+                <img src="https://media.istockphoto.com/id/1433285750/photo/indian-businessman-working-on-laptop-at-office.jpg?s=170667a&w=0&k=20&c=R03VTSlYFnPpNwVeg5378sSZ9v6Wp5iSQldybYb2WbU=" alt="Person working on laptop" class="hero-image">
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>1000+</h3>
+                    <p data-en="Available Schemes" data-hi="उपलब्ध योजनाएं">Available Schemes</p>
+                </div>
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p data-en="Success Rate" data-hi="सफलता दर">Success Rate</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p data-en="Support" data-hi="समर्थन">Support</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 data-en="About Perfect Schemes" data-hi="परफेक्ट स्कीम्स के बारे में">About Perfect Schemes</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-en="Perfect Schemes is an initiative supported by the Government of India to bridge the gap between businesses and government schemes. Our platform serves as a comprehensive repository of all central and state government schemes for businesses across sectors." data-hi="परफेक्ट स्कीम्स भारत सरकार द्वारा समर्थित एक पहल है जो व्यवसायों और सरकारी योजनाओं के बीच की खाई को पाटने के लिए है। हमारा प्लेटफॉर्म सभी केंद्रीय और राज्य सरकार की योजनाओं का एक व्यापक भंडार है।">Perfect Schemes is an initiative supported by the Government of India to bridge the gap between businesses and government schemes.</p>
+                    
+                    <h3 data-en="Government Partners" data-hi="सरकारी भागीदार">Government Partners</h3>
+                    <ul>
+                        <li data-en="Ministry of Micro, Small and Medium Enterprises" data-hi="सूक्ष्म, लघु और मध्यम उद्यम मंत्रालय">Ministry of Micro, Small and Medium Enterprises</li>
+                        <li data-en="Ministry of Agriculture & Farmers Welfare" data-hi="कृषि और किसान कल्याण मंत्रालय">Ministry of Agriculture & Farmers Welfare</li>
+                        <li data-en="Ministry of Commerce and Industry" data-hi="वाणिज्य और उद्योग मंत्रालय">Ministry of Commerce and Industry</li>
+                        <li data-en="Ministry of Food Processing Industries" data-hi="खाद्य प्रसंस्करण उद्योग मंत्रालय">Ministry of Food Processing Industries</li>
+                    </ul>
+                    
+                    <h3 data-en="Our Mission" data-hi="हमारा मिशन">Our Mission</h3>
+                    <p data-en="To empower Indian businesses by providing transparent access to government schemes, eliminating middlemen, and simplifying compliance processes through technology." data-hi="सरकारी योजनाओं तक पारदर्शी पहुंच प्रदान करके, मध्यस्थों को समाप्त करके और प्रौद्योगिकी के माध्यम से अनुपालन प्रक्रियाओं को सरल बनाकर भारतीय व्यवसायों को सशक्त बनाना।">To empower Indian businesses by providing transparent access to government schemes.</p>
+                </div>
+                <div id="histogram"></div>
+            </div>
+        </section>
+
+        <section id="checker">
+            <h2 data-en="Tell Us About Your Business" data-hi="अपने व्यवसाय के बारे में हमें बताएं">Tell Us About Your Business</h2>
+            <p data-en="We'll find the perfect schemes based on your details" data-hi="हम आपके विवरणों के आधार पर सही योजनाएं खोजेंगे">We'll find the perfect schemes based on your details</p>
+            <form id="eligibilityForm">
+                <label data-en="Company Name" data-hi="कंपनी का नाम">Company Name</label>
+                <input type="text" placeholder="Enter your company name" required>
+                
+                <label data-en="Business Type" data-hi="व्यवसाय प्रकार">Business Type</label>
+                <select id="businessType" required>
+                    <option value="">Select Business Type</option>
+                    <option value="Agri">Agriculture/Farming</option>
+                    <option value="MSME">Micro/Small/Medium Enterprise</option>
+                    <option value="Startup">Startup</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Service">Service Provider</option>
+                    <option value="Women">Women-Owned Business</option>
+                    <option value="SCST">SC/ST Owned Business</option>
+                    <option value="Export">Export Business</option>
+                </select>
+                
+                <label data-en="Business Sector" data-hi="व्यवसाय क्षेत्र">Business Sector</label>
+                <select id="sector" required>
+                    <option value="">Select Sector</option>
+                    <option value="Food">Food Processing</option>
+                    <option value="Textile">Textile</option>
+                    <option value="Handicraft">Handicraft</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Education">Education</option>
+                    <option value="Renewable">Renewable Energy</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Tourism">Tourism</option>
+                </select>
+                
+                <label data-en="Company Size" data-hi="कंपनी का आकार">Company Size</label>
+                <select id="size" required>
+                    <option value="">Select Size</option>
+                    <option value="Micro">Micro (Investment < ₹1 Cr, Turnover < ₹5 Cr)</option>
+                    <option value="Small">Small (Investment < ₹10 Cr, Turnover < ₹50 Cr)</option>
+                    <option value="Medium">Medium (Investment < ₹50 Cr, Turnover < ₹250 Cr)</option>
+                    <option value="Large">Large Enterprise</option>
+                </select>
+                
+                <label data-en="Location" data-hi="स्थान">Location</label>
+                <select id="location" required>
+                    <option value="">Select Location</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Rural">Rural Area</option>
+                    <option value="Urban">Urban Area</option>
+                    <option value="North">North India</option>
+                    <option value="South">South India</option>
+                    <option value="East">East India</option>
+                    <option value="West">West India</option>
+                    <option value="Northeast">Northeast India</option>
+                </select>
+                
+                <label data-en="Annual Revenue" data-hi="वार्षिक राजस्व">Annual Revenue</label>
+                <select id="revenue" required>
+                    <option value="">Select Revenue</option>
+                    <option value="Low">Below ₹10 Lakhs</option>
+                    <option value="Medium">₹10 Lakhs - ₹1 Crore</option>
+                    <option value="High">Above ₹1 Crore</option>
+                </select>
+                
+                <label data-en="Years in Operation" data-hi="संचालन के वर्ष">Years in Operation</label>
+                <select id="years" required>
+                    <option value="">Select Years</option>
+                    <option value="New">Less than 1 year</option>
+                    <option value="1-3">1-3 years</option>
+                    <option value="3-5">3-5 years</option>
+                    <option value="5+">More than 5 years</option>
+                </select>
+                
+                <button type="submit" data-en="Find My Schemes →" data-hi="मेरी योजनाएं खोजें →">Find My Schemes →</button>
+            </form>
+        </section>
+
+        <section id="dashboard">
+            <h2 data-en="Scheme Dashboard" data-hi="स्कीम डैशबोर्ड">Scheme Dashboard</h2>
+            <div class="dashboard-controls">
+                <input type="text" id="searchInput" placeholder="Search schemes..." data-en="Search schemes..." data-hi="स्कीम खोजें...">
+                <select id="filterSector">
+                    <option value="">All Sectors</option>
+                    <option value="Agri">Agriculture</option>
+                    <option value="MSME">MSME</option>
+                    <option value="Startup">Startup</option>
+                    <option value="Women">Women Entrepreneurs</option>
+                </select>
+            </div>
+            
+            <div id="schemeList"></div>
+            
+            <div class="alert-preview">
+                <h3 data-en="Email Preview LIVE" data-hi="ईमेल पूर्वावलोकन लाइव">Email Preview LIVE</h3>
+                <div class="alert-card">
+                    <h4 data-en="New Scheme Alert" data-hi="नई योजना अलर्ट">New Scheme Alert</h4>
+                    <p data-en="Personalized for your profile • Delhi NCR" data-hi="आपके प्रोफाइल के लिए वैयक्तिकृत • दिल्ली एनसीआर">Personalized for your profile • Delhi NCR</p>
+                    <div class="scheme-alert">
+                        <h5>PM-KISAN Yojana Extension 2024 <span>NEW</span></h5>
+                        <p data-en="Eligibility: Small & marginal farmers in Delhi NCR" data-hi="पात्रता: दिल्ली एनसीआर में छोटे और सीमांत किसान">Eligibility: Small & marginal farmers in Delhi NCR</p>
+                        <p data-en="Benefit: ₹8,000/year (increased from ₹6,000)" data-hi="लाभ: ₹8,000/वर्ष (₹6,000 से बढ़ाया गया)">Benefit: ₹8,000/year (increased from ₹6,000)</p>
+                        <p data-en="Deadline: 15 days remaining" data-hi="समय सीमा: 15 दिन शेष">Deadline: 15 days remaining</p>
+                        <p data-en="Match Score: 95% - Perfect match for your profile!" data-hi="मैच स्कोर: 95% - आपके प्रोफाइल के लिए सही मैच!">Match Score: 95% - Perfect match for your profile!</p>
+                        <button data-en="Apply Now" data-hi="अभी आवेदन करें">Apply Now</button>
+                        <button data-en="Read Details" data-hi="विवरण पढ़ें">Read Details</button>
+                    </div>
+                    <button data-en="Get Help" data-hi="मदद प्राप्त करें">Get Help</button>
+                </div>
+            </div>
+            
+            <form id="alertForm">
+                <label data-en="Subscribe for Email Alerts:" data-hi="ईमेल अलर्ट के लिए सदस्यता लें:">Subscribe for Email Alerts:</label>
+                <input type="email" id="email" placeholder="Your email" required data-en="Your email" data-hi="आपका ईमेल">
+                <button type="submit" data-en="Subscribe" data-hi="सदस्यता लें">Subscribe</button>
+            </form>
+        </section>
+
+        <section id="guide">
+            <h2 data-en="Compliance & Licensing Guide" data-hi="अनुपालन और लाइसेंसिंग गाइड">Compliance & Licensing Guide</h2>
+            
+            <div class="guide-tabs">
+                <button class="tab-btn active" onclick="openGuideTab('business-registration')" data-en="Business Registration" data-hi="व्यवसाय पंजीकरण">Business Registration</button>
+                <button class="tab-btn" onclick="openGuideTab('license-application')" data-en="License Application" data-hi="लाइसेंस आवेदन">License Application</button>
+                <button class="tab-btn" onclick="openGuideTab('approval-filing')" data-en="Approval Filing" data-hi="अनुमोदन फाइलिंग">Approval Filing</button>
+            </div>
+            
+            <div id="business-registration" class="guide-tab-content active">
+                <h3 data-en="Business Registration Step-by-Step Instructions" data-hi="व्यवसाय पंजीकरण चरण-दर-चरण निर्देश">Business Registration Step-by-Step Instructions</h3>
+                <ol class="steps">
+                    <li data-en="Choose a business structure (Proprietorship, Partnership, LLP, Private Limited, etc.)" data-hi="व्यवसाय संरचना चुनें (एकमात्र स्वामित्व, साझेदारी, एलएलपी, प्राइवेट लिमिटेड, आदि)">Choose a business structure</li>
+                    <li data-en="Obtain Digital Signature Certificate (DSC) for directors/partners" data-hi="निदेशकों/भागीदारों के लिए डिजिटल हस्ताक्षर प्रमाणपत्र (डीएससी) प्राप्त करें">Obtain Digital Signature Certificate (DSC)</li>
+                    <li data-en="Apply for Director Identification Number (DIN) if applicable" data-hi="यदि लागू हो तो निदेशक पहचान संख्या (डीआईएन) के लिए आवेदन करें">Apply for Director Identification Number (DIN)</li>
+                    <li data-en="Reserve your company name through RUN (Reserve Unique Name) service" data-hi="आरयूएन (अद्वितीय नाम आरक्षित करें) सेवा के माध्यम से अपना कंपनी नाम आरक्षित करें">Reserve your company name</li>
+                    <li data-en="File incorporation documents (MOA, AOA, etc.) with the Registrar of Companies (ROC)" data-hi="कंपनी रजिस्ट्रार (आरओसी) के साथ समावेशन दस्तावेज (एमओए, एओए, आदि) फाइल करें">File incorporation documents</li>
+                    <li data-en="Pay the required registration fees" data-hi="आवश्यक पंजीकरण शुल्क का भुगतान करें">Pay the required registration fees</li>
+                    <li data-en="Obtain Certificate of Incorporation/Registration from ROC" data-hi="कंपनी रजिस्ट्रार से समावेशन/पंजीकरण प्रमाणपत्र प्राप्त करें">Obtain Certificate of Incorporation</li>
+                    <li data-en="Apply for PAN and TAN for your business" data-hi="अपने व्यवसाय के लिए पैन और टैन के लिए आवेदन करें">Apply for PAN and TAN</li>
+                    <li data-en="Register for GST if applicable" data-hi="यदि लागू हो तो जीएसटी के लिए पंजीकरण करें">Register for GST if applicable</li>
+                    <li data-en="Open a business bank account" data-hi="एक व्यवसाय बैंक खाता खोलें">Open a business bank account</li>
+                </ol>
+                <div class="guide-resources">
+                    <button onclick="alert('Checklist downloaded (simulated)!')" data-en="Download Checklist" data-hi="चेकलिस्ट डाउनलोड करें">Download Checklist</button>
+                    <a href="https://www.mca.gov.in/content/mca/global/en/home.html" target="_blank" data-en="MCA Portal" data-hi="एमसीए पोर्टल">MCA Portal</a>
+                    <a href="https://www.gst.gov.in/" target="_blank" data-en="GST Portal" data-hi="जीएसटी पोर्टल">GST Portal</a>
+                </div>
+            </div>
+            
+            <div id="license-application" class="guide-tab-content">
+                <h3 data-en="License Application Step-by-Step Instructions" data-hi="लाइसेंस आवेदन चरण-दर-चरण निर्देश">License Application Step-by-Step Instructions</h3>
+                <ol class="steps">
+                    <li data-en="Identify the specific licenses required for your business type and sector" data-hi="अपने व्यवसाय प्रकार और क्षेत्र के लिए आवश्यक विशिष्ट लाइसेंस की पहचान करें">Identify required licenses</li>
+                    <li data-en="Check eligibility criteria for each license" data-hi="प्रत्येक लाइसेंस के लिए पात्रता मानदंड जांचें">Check eligibility criteria</li>
+                    <li data-en="Gather all necessary documents (varies by license)" data-hi="सभी आवश्यक दस्तावेज एकत्र करें (लाइसेंस के अनुसार भिन्न होता है)">Gather necessary documents</li>
+                    <li data-en="Create an account on the relevant government portal (ULC, FSSAI, etc.)" data-hi="संबंधित सरकारी पोर्टल (यूएलसी, एफएसएसएआई, आदि) पर एक खाता बनाएं">Create account on government portal</li>
+                    <li data-en="Fill out the application form with accurate details" data-hi="सटीक विवरणों के साथ आवेदन पत्र भरें">Fill out application form</li>
+                    <li data-en="Upload scanned copies of required documents" data-hi="आवश्यक दस्तावेजों की स्कैन की गई प्रतियां अपलोड करें">Upload required documents</li>
+                    <li data-en="Pay the application fees online" data-hi="ऑनलाइन आवेदन शुल्क का भुगतान करें">Pay application fees</li>
+                    <li data-en="Submit the application and note the reference number" data-hi="आवेदन जमा करें और संदर्भ संख्या नोट करें">Submit application</li>
+                    <li data-en="Track application status online" data-hi="ऑनलाइन आवेदन स्थिति ट्रैक करें">Track application status</li>
+                    <li data-en="After approval, download the license certificate" data-hi="अनुमोदन के बाद, लाइसेंस प्रमाणपत्र डाउनलोड करें">Download license certificate</li>
+                </ol>
+                <div class="guide-resources">
+                    <button onclick="alert('Checklist downloaded (simulated)!')" data-en="Download Checklist" data-hi="चेकलिस्ट डाउनलोड करें">Download Checklist</button>
+                    <a href="https://fssai.gov.in/" target="_blank" data-en="FSSAI Portal" data-hi="एफएसएसएआई पोर्टल">FSSAI Portal</a>
+                    <a href="https://www.udyamregistration.gov.in/" target="_blank" data-en="Udyam Portal" data-hi="उद्यम पोर्टल">Udyam Portal</a>
+                </div>
+            </div>
+            
+            <div id="approval-filing" class="guide-tab-content">
+                <h3 data-en="Approval Filing Step-by-Step Instructions" data-hi="अनुमोदन फाइलिंग चरण-दर-चरण निर्देश">Approval Filing Step-by-Step Instructions</h3>
+                <ol class="steps">
+                    <li data-en="Identify the specific approvals required for your business operations" data-hi="अपने व्यवसाय संचालन के लिए आवश्यक विशिष्ट अनुमोदनों की पहचान करें">Identify required approvals</li>
+                    <li data-en="Check the regulatory authority for each approval" data-hi="प्रत्येक अनुमोदन के लिए नियामक प्राधिकरण की जांच करें">Check regulatory authority</li>
+                    <li data-en="Prepare the necessary documentation as per requirements" data-hi="आवश्यकताओं के अनुसार आवश्यक दस्तावेजीकरण तैयार करें">Prepare documentation</li>
+                    <li data-en="Submit preliminary applications if required (environmental clearance, etc.)" data-hi="यदि आवश्यक हो तो प्रारंभिक आवेदन जमा करें (पर्यावरणीय मंजूरी, आदि)">Submit preliminary applications</li>
+                    <li data-en="Complete the main application form with all details" data-hi="सभी विवरणों के साथ मुख्य आवेदन पत्र पूरा करें">Complete main application</li>
+                    <li data-en="Get required inspections done (factory, fire safety, etc.)" data-hi="आवश्यक निरीक्षण करवाएं (कारखाना, अग्नि सुरक्षा, आदि)">Get required inspections</li>
+                    <li data-en="Submit the complete application package to the authority" data-hi="प्राधिकरण को पूरा आवेदन पैकेज जमा करें">Submit complete application</li>
+                    <li data-en="Pay the required processing fees" data-hi="आवश्यक प्रसंस्करण शुल्क का भुगतान करें">Pay processing fees</li>
+                    <li data-en="Respond to any queries from the authority promptly" data-hi="प्राधिकरण के किसी भी प्रश्न का तुरंत जवाब दें">Respond to queries</li>
+                    <li data-en="Receive the final approval certificate" data-hi="अंतिम अनुमोदन प्रमाणपत्र प्राप्त करें">Receive approval certificate</li>
+                </ol>
+                <div class="guide-resources">
+                    <button onclick="alert('Checklist downloaded (simulated)!')" data-en="Download Checklist" data-hi="चेकलिस्ट डाउनलोड करें">Download Checklist</button>
+                    <a href="https://parivesh.nic.in/" target="_blank" data-en="Environmental Clearances" data-hi="पर्यावरणीय मंजूरी">Environmental Clearances</a>
+                    <a href="https://www.dgfasli.nic.in/" target="_blank" data-en="Factory Approvals" data-hi="कारखाना अनुमोदन">Factory Approvals</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 data-en="Frequently Asked Questions" data-hi="अक्सर पूछे जाने वाले प्रश्न">Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="How do I apply for a scheme?" data-hi="मैं एक योजना के लिए कैसे आवेदन करूं?">How do I apply for a scheme?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="You can apply for schemes directly through our dashboard. After finding suitable schemes using the Eligibility Checker, click on 'Apply Now' for your chosen scheme. You'll be redirected to the official government portal where you can complete the application process. We provide step-by-step guidance for each scheme's application requirements." data-hi="आप हमारे डैशबोर्ड के माध्यम से सीधे योजनाओं के लिए आवेदन कर सकते हैं। पात्रता चेकर का उपयोग करके उपयुक्त योजनाएं ढूंढने के बाद, अपनी चुनी हुई योजना के लिए 'अभी आवेदन करें' पर क्लिक करें। आपको आधिकारिक सरकारी पोर्टल पर पुनर्निर्देशित किया जाएगा जहां आप आवेदन प्रक्रिया पूरी कर सकते हैं। हम प्रत्येक योजना की आवेदन आवश्यकताओं के लिए चरण-दर-चरण मार्गदर्शन प्रदान करते हैं।">You can apply for schemes directly through our dashboard.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="What if I'm not eligible for any schemes?" data-hi="अगर मैं किसी भी योजना के लिए पात्र नहीं हूं तो क्या होगा?">What if I'm not eligible for any schemes?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="If you're not currently eligible for any schemes, we recommend: 1) Checking back regularly as new schemes are added frequently, 2) Reviewing the eligibility criteria to see if small changes to your business could qualify you, 3) Contacting our support team who may suggest alternative programs or future opportunities, and 4) Exploring our compliance guides to prepare your business for future scheme eligibility." data-hi="यदि आप वर्तमान में किसी भी योजना के लिए पात्र नहीं हैं, तो हम अनुशंसा करते हैं: 1) नियमित रूप से जांच करते रहें क्योंकि नई योजनाएं अक्सर जोड़ी जाती हैं, 2) पात्रता मानदंडों की समीक्षा करें यह देखने के लिए कि क्या आपके व्यवसाय में छोटे बदलाव आपको योग्य बना सकते हैं, 3) हमारी सहायता टीम से संपर्क करें जो वैकल्पिक कार्यक्रमों या भविष्य के अवसरों का सुझाव दे सकती है, और 4) भविष्य की योजना पात्रता के लिए अपने व्यवसाय को तैयार करने के लिए हमारे अनुपालन मार्गदर्शकों का अन्वेषण करें।">If you're not currently eligible for any schemes, we recommend:</p>
+                        <ol>
+                            <li data-en="Checking back regularly as new schemes are added frequently" data-hi="नियमित रूप से जांच करते रहें क्योंकि नई योजनाएं अक्सर जोड़ी जाती हैं">Checking back regularly</li>
+                            <li data-en="Reviewing eligibility criteria for potential changes" data-hi="संभावित परिवर्तनों के लिए पात्रता मानदंडों की समीक्षा करें">Reviewing eligibility criteria</li>
+                            <li data-en="Contacting our support team for alternatives" data-hi="विकल्पों के लिए हमारी सहायता टीम से संपर्क करें">Contacting our support team</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="How often is the scheme database updated?" data-hi="योजना डेटाबेस कितनी बार अपडेट किया जाता है?">How often is the scheme database updated?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="Our scheme database is updated in real-time as new schemes are announced by central and state governments. We monitor official gazettes and government portals daily to ensure all information is current. You can subscribe to our email alerts to receive notifications whenever new schemes matching your profile are added." data-hi="हमारा योजना डेटाबेस वास्तविक समय में अपडेट किया जाता है जब केंद्र और राज्य सरकारों द्वारा नई योजनाएं घोषित की जाती हैं। हम सभी जानकारी को वर्तमान सुनिश्चित करने के लिए दैनिक आधिकारिक राजपत्रों और सरकारी पोर्टलों की निगरानी करते हैं। आप हमारे ईमेल अलर्ट की सदस्यता ले सकते हैं ताकि जब भी आपके प्रोफाइल से मेल खाने वाली नई योजनाएं जोड़ी जाएं, आपको सूचनाएं प्राप्त हों।">Our scheme database is updated in real-time as new schemes are announced.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="Is there any cost to use Perfect Schemes?" data-hi="परफेक्ट स्कीम्स का उपयोग करने के लिए क्या कोई लागत है?">Is there any cost to use Perfect Schemes?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="Perfect Schemes is completely free to use for all businesses. We are supported by government grants and our mission is to make scheme information accessible without middlemen or hidden costs. Some schemes may have application fees payable to the government, but our platform and services are always free." data-hi="परफेक्ट स्कीम्स सभी व्यवसायों के लिए उपयोग करने के लिए पूरी तरह से मुफ्त है। हम सरकारी अनुदानों द्वारा समर्थित हैं और हमारा मिशन मध्यस्थों या छिपी लागतों के बिना योजना जानकारी को सुलभ बनाना है। कुछ योजनाओं में सरकार को देय आवेदन शुल्क हो सकता है, लेकिन हमारा प्लेटफॉर्म और सेवाएं हमेशा मुफ्त हैं।">Perfect Schemes is completely free to use for all businesses.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="How accurate is the eligibility matching?" data-hi="पात्रता मिलान कितना सटीक है?">How accurate is the eligibility matching?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="Our eligibility matching is 95% accurate based on the information you provide. We use advanced algorithms that consider all published eligibility criteria for each scheme. However, final eligibility is always determined by the approving government authority when you apply. We recommend reviewing scheme details thoroughly before applying." data-hi="आपके द्वारा प्रदान की गई जानकारी के आधार पर हमारा पात्रता मिलान 95% सटीक है। हम उन्नत एल्गोरिदम का उपयोग करते हैं जो प्रत्येक योजना के लिए सभी प्रकाशित पात्रता मानदंडों पर विचार करते हैं। हालांकि, अंतिम पात्रता हमेशा आवेदन करने पर अनुमोदन करने वाले सरकारी प्राधिकरण द्वारा निर्धारित की जाती है। हम आवेदन करने से पहले योजना विवरणों को अच्छी तरह से समीक्षा करने की सलाह देते हैं।">Our eligibility matching is 95% accurate based on the information you provide.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="Can I track my application status through Perfect Schemes?" data-hi="क्या मैं परफेक्ट स्कीम्स के माध्यम से अपनी आवेदन स्थिति को ट्रैक कर सकता हूं?">Can I track my application status through Perfect Schemes?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="Yes, once you've applied for a scheme through our platform (or even outside), you can track its status by logging into your account. We integrate with government portals where possible to provide real-time updates. For schemes where direct integration isn't available, we provide the official tracking links and expected processing times." data-hi="हां, एक बार जब आप हमारे प्लेटफॉर्म (या बाहर भी) के माध्यम से किसी योजना के लिए आवेदन कर देते हैं, तो आप अपने खाते में लॉग इन करके इसकी स्थिति को ट्रैक कर सकते हैं। हम वास्तविक समय अपडेट प्रदान करने के लिए जहां संभव हो सरकारी पोर्टलों के साथ एकीकृत करते हैं। उन योजनाओं के लिए जहां प्रत्यक्ष एकीकरण उपलब्ध नहीं है, हम आधिकारिक ट्रैकिंग लिंक और अपेक्षित प्रसंस्करण समय प्रदान करते हैं।">Yes, once you've applied for a scheme through our platform, you can track its status.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="How do I change my notification preferences?" data-hi="मैं अपनी अधिसूचना प्राथमिकताएं कैसे बदलूं?">How do I change my notification preferences?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="You can manage your notification preferences by: 1) Logging into your account, 2) Going to 'Profile Settings', 3) Selecting 'Notification Preferences', and 4) Choosing your preferred channels (email, SMS, WhatsApp) and frequency. Changes are saved automatically." data-hi="आप अपनी अधिसूचना प्राथमिकताओं को इस प्रकार प्रबंधित कर सकते हैं: 1) अपने खाते में लॉग इन करके, 2) 'प्रोफाइल सेटिंग्स' पर जाकर, 3) 'अधिसूचना प्राथमिकताएं' का चयन करके, और 4) अपने पसंदीदा चैनलों (ईमेल, एसएमएस, व्हाट्सएप) और आवृत्ति का चयन करके। परिवर्तन स्वचालित रूप से सहेजे जाते हैं।">You can manage your notification preferences in your account settings.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="What business types are supported?" data-hi="किस प्रकार के व्यवसाय समर्थित हैं?">What business types are supported?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="Perfect Schemes supports all business types including: Agriculture/Farming, MSMEs (Micro, Small, Medium Enterprises), Startups, Manufacturing, Retail, Service Providers, Women-Owned Businesses, SC/ST Owned Businesses, and Export Businesses. We continuously add support for more sectors based on government scheme availability." data-hi="परफेक्ट स्कीम्स सभी व्यवसाय प्रकारों का समर्थन करता है जिनमें शामिल हैं: कृषि/कृषि, एमएसएमई (सूक्ष्म, लघु, मध्यम उद्यम), स्टार्टअप, विनिर्माण, खुदरा, सेवा प्रदाता, महिला-स्वामित्व वाले व्यवसाय, एससी/एसटी स्वामित्व वाले व्यवसाय, और निर्यात व्यवसाय। हम सरकारी योजना उपलब्धता के आधार पर अधिक क्षेत्रों के लिए समर्थन जोड़ते रहते हैं।">Perfect Schemes supports all business types including:</p>
+                        <ul>
+                            <li data-en="Agriculture/Farming" data-hi="कृषि/कृषि">Agriculture/Farming</li>
+                            <li data-en="MSMEs (Micro, Small, Medium Enterprises)" data-hi="एमएसएमई (सूक्ष्म, लघु, मध्यम उद्यम)">MSMEs</li>
+                            <li data-en="Startups" data-hi="स्टार्टअप">Startups</li>
+                            <li data-en="Women-Owned Businesses" data-hi="महिला-स्वामित्व वाले व्यवसाय">Women-Owned Businesses</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="How secure is my business information?" data-hi="मेरी व्यवसाय जानकारी कितनी सुरक्षित है?">How secure is my business information?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-en="We take data security very seriously. All your information is encrypted both in transit and at rest. We comply with India's Data Protection standards and never share your details without consent. For government scheme applications, data is shared only with the relevant authorities through secure channels when you choose to apply." data-hi="हम डेटा सुरक्षा को बहुत गंभीरता से लेते हैं। आपकी सभी जानकारी ट्रांजिट और आराम दोनों में एन्क्रिप्टेड है। हम भारत के डेटा संरक्षण मानकों का पालन करते हैं और सहमति के बिना आपके विवरणों को कभी साझा नहीं करते हैं। सरकारी योजना आवेदनों के लिए, डेटा केवल प्रासंगिक अधिकारियों के साथ सुरक्षित चैनलों के माध्यम से साझा किया जाता है जब आप आवेदन करना चुनते हैं।">We take data security very seriously. All your information is encrypted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 data-en="Contact Us" data-hi="हमसे संपर्क करें">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-en="Our Offices" data-hi="हमारे कार्यालय">Our Offices</h3>
+                    <p data-en="Delhi Headquarters:" data-hi="दिल्ली मुख्यालय:">Delhi Headquarters:</p>
+                    <address data-en="Perfect Schemes, 2nd Floor, NSIC Business Park, Okhla Industrial Estate, New Delhi - 110020" data-hi="परफेक्ट स्कीम्स, दूसरी मंजिल, एनएसआईसी बिजनेस पार्क, ओखला औद्योगिक क्षेत्र, नई दिल्ली - 110020">Perfect Schemes, 2nd Floor, NSIC Business Park, New Delhi - 110020</address>
+                    
+                    <h3 data-en="Support Channels" data-hi="समर्थन चैनल">Support Channels</h3>
+                    <p data-en="Email: support@perfectschemes.in" data-hi="ईमेल: support@perfectschemes.in">Email: support@perfectschemes.in</p>
+                    <p data-en="Phone: 1800-123-4567 (Toll-free)" data-hi="फोन: 1800-123-4567 (टोल-फ्री)">Phone: 1800-123-4567 (Toll-free)</p>
+                    <p data-en="WhatsApp: +91 98765 43210" data-hi="व्हाट्सएप: +91 98765 43210">WhatsApp: +91 98765 43210</p>
+                    
+                    <h3 data-en="Business Hours" data-hi="व्यवसाय घंटे">Business Hours</h3>
+                    <p data-en="Monday to Friday: 9:00 AM - 6:00 PM" data-hi="सोमवार से शुक्रवार: सुबह 9:00 बजे - शाम 6:00 बजे">Monday to Friday: 9:00 AM - 6:00 PM</p>
+                    <p data-en="Saturday: 10:00 AM - 2:00 PM" data-hi="शनिवार: सुबह 10:00 बजे - दोपहर 2:00 बजे">Saturday: 10:00 AM - 2:00 PM</p>
+                </div>
+                
+                <form id="contactForm">
+                    <label data-en="Name:" data-hi="नाम:">Name:</label>
+                    <input type="text" required>
+                    
+                    <label data-en="Email:" data-hi="ईमेल:">Email:</label>
+                    <input type="email" required>
+                    
+                    <label data-en="Phone:" data-hi="फोन:">Phone:</label>
+                    <input type="tel">
+                    
+                    <label data-en="Subject:" data-hi="विषय:">Subject:</label>
+                    <select>
+                        <option data-en="General Inquiry" data-hi="सामान्य पूछताछ">General Inquiry</option>
+                        <option data-en="Scheme Assistance" data-hi="योजना सहायता">Scheme Assistance</option>
+                        <option data-en="Technical Support" data-hi="तकनीकी सहायता">Technical Support</option>
+                        <option data-en="Partnership" data-hi="साझेदारी">Partnership</option>
+                        <option data-en="Feedback" data-hi="प्रतिक्रिया">Feedback</option>
+                    </select>
+                    
+                    <label data-en="Message:" data-hi="संदेश:">Message:</label>
+                    <textarea required></textarea>
+                    
+                    <button type="submit" data-en="Send Message" data-hi="संदेश भेजें">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="login" class="modal">
+            <div class="modal-content">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <h2 data-en="Login to Your Account" data-hi="अपने खाते में लॉगिन करें">Login to Your Account</h2>
+                <form id="loginForm">
+                    <label data-en="Username or Email:" data-hi="उपयोगकर्ता नाम या ईमेल:">Username or Email:</label>
+                    <input type="text" id="loginUsername" required>
+                    
+                    <label data-en="Password:" data-hi="पासवर्ड:">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                    
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" data-en="Remember me" data-hi="मुझे याद रखें"> Remember me
+                        </label>
+                        <a href="#" data-en="Forgot password?" data-hi="पासवर्ड भूल गए?">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" data-en="Login" data-hi="लॉगिन">Login</button>
+                    
+                    <p class="switch-form" data-en="Don't have an account? " data-hi="खाता नहीं है? ">
+                        <span data-en="Don't have an account? " data-hi="खाता नहीं है? ">Don't have an account? </span>
+                        <a href="#" onclick="showRegister()" data-en="Register here" data-hi="यहां पंजीकरण करें">Register here</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <section id="register" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <h2 data-en="Create New Account" data-hi="नया खाता बनाएं">Create New Account</h2>
+    
+        <div id="registerFormContainer">
+            <form id="registerForm">
+                <div class="form-scroll-container">
+                    <label data-en="Full Name:" data-hi="पूरा नाम:">Full Name:</label>
+                    <input type="text" id="registerName" required>
+                    
+                    <label data-en="Email Address:" data-hi="ईमेल पता:">Email Address:</label>
+                    <input type="email" id="registerEmail" required>
+                    
+                    <label data-en="Username:" data-hi="उपयोगकर्ता नाम:">Username:</label>
+                    <input type="text" id="registerUsername" required>
+                    
+                    <label data-en="Password:" data-hi="पासवर्ड:">Password:</label>
+                    <input type="password" id="registerPassword" required>
+                    
+                    <label data-en="Confirm Password:" data-hi="पासवर्ड की पुष्टि करें:">Confirm Password:</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                    
+                    <label data-en="Business Type (Optional):" data-hi="व्यवसाय प्रकार (वैकल्पिक):">Business Type (Optional):</label>
+                    <select id="registerBusinessType">
+                        <option value="">Select Business Type</option>
+                        <option value="Agri">Agriculture/Farming</option>
+                        <option value="MSME">Micro/Small/Medium Enterprise</option>
+                        <option value="Startup">Startup</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" required data-en="I agree to the Terms & Conditions" data-hi="मैं नियम और शर्तों से सहमत हूं"> I agree to the Terms & Conditions
+                        </label>
+                    </div>
+                </div>
+                
+                <div id="registerActionButtons" style="display: none;">
+                    <button type="button" id="cutButton" onclick="resetRegisterForm()" 
+                            data-en="Cut" data-hi="काटें">Cut</button>
+                    <button type="submit" id="registerButton" 
+                            data-en="Register" data-hi="पंजीकरण करें">Register</button>
+                </div>
+                
+                <p class="switch-form">
+                    <span data-en="Already have an account? " data-hi="पहले से ही एक खाता है? ">Already have an account? </span>
+                    <a href="#" onclick="showLogin()" data-en="Login here" data-hi="यहां लॉगिन करें">Login here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h3>
+                <ul>
+                    <li><a href="#" onclick="showSection('home')" data-en="Home" data-hi="होम">Home</a></li>
+                    <li><a href="#" onclick="showSection('about')" data-en="About" data-hi="हमारे बारे में">About</a></li>
+                    <li><a href="#" onclick="showSection('checker')" data-en="Eligibility Checker" data-hi="पात्रता जांच">Eligibility Checker</a></li>
+                    <li><a href="#" onclick="showSection('dashboard')" data-en="Scheme Dashboard" data-hi="योजना डैशबोर्ड">Scheme Dashboard</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-en="Resources" data-hi="संसाधन">Resources</h3>
+                <ul>
+                    <li><a href="#" onclick="showSection('guide')" data-en="Compliance Guide" data-hi="अनुपालन गाइड">Compliance Guide</a></li>
+                    <li><a href="#" onclick="showSection('faq')" data-en="FAQ" data-hi="सामान्य प्रश्न">FAQ</a></li>
+                    <li><a href="#" onclick="showSection('contact')" data-en="Contact" data-hi="संपर्क करें">Contact</a></li>
+                    <li><a href="#" data-en="Privacy Policy" data-hi="गोपनीयता नीति">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-en="Connect With Us" data-hi="हमसे जुड़ें">Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" data-en="Facebook" data-hi="फेसबुक">Facebook</a>
+                    <a href="#" data-en="Twitter" data-hi="ट्विटर">Twitter</a>
+                    <a href="#" data-en="LinkedIn" data-hi="लिंक्डइन">LinkedIn</a>
+                    <a href="#" data-en="YouTube" data-hi="यूट्यूब">YouTube</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p data-en="&copy; 2025 Perfect Schemes. All rights reserved. | Developed with ❤️ for Indian Businesses" data-hi="&copy; 2025 परफेक्ट स्कीम्स। सभी अधिकार सुरक्षित। | भारतीय व्यवसायों के लिए ❤️ के साथ विकसित">&copy; 2025 Perfect Schemes. All rights reserved. | Developed with ❤️ for Indian Businesses</p>
+        </div>
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
