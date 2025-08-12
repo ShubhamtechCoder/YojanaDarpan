@@ -10,6 +10,7 @@
     color: #60da66; /* Primary */
     font-family: 'Inter Bold', sans-serif;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -21,9 +22,13 @@ body {
     flex-direction: column;
 }
 
+.contact{
+    justify-content: center;
+}
+
 /* Header & Navigation */
 header {
-    background-color: #2e7d32;
+    background-color:  #236e28;
     color: white;
     padding: 1rem;
     position: sticky;
@@ -33,13 +38,14 @@ header {
 }
 
 nav {
-    max-width: 1200px;
+ 
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 8px;
 }
 
 nav h1 a {
