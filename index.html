@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav>
-            <h1><a href="#" onclick="showSection('home')" class="edrd">Yojana Darpan</a></h1>
+            <h1><a href="#"   onclick="showSection('home')" style="font-size: 30px;" class="edrd">Yojana Darpan</a></h1>
             <ul>
                 <li><a href="#home" onclick="showSection('home')">Home</a></li>
                 <li><a href="#about" onclick="showSection('about')">About</a></li>
@@ -20,10 +20,13 @@
                 <li><a href="#dashboard" onclick="showSection('dashboard')">Scheme Dashboard</a></li>
                 <li><a href="#guide" onclick="showSection('guide')">Compliance Guide</a></li>
                 <li><a href="#faq" onclick="showSection('faq')">FAQ</a></li>
-                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
-                <li><button onclick="toggleLanguage()">Toggle Language (EN/HI)</button></li>
-                <li><button onclick="showLogin()">Login</button></li>
-                <li><button onclick="showRegister()">Register</button></li>
+                <li><a href="#contact" onclick="showSection('contact')" class="contact">Contact</a></li>
+               
+            </ul>
+            <ul>
+                 <li><button style="padding: 5px; justify-content: space-between;" onclick="toggleLanguage()">Language (EN/HI)</button></li>
+                <li><button style="padding: 5px" onclick="showLogin()">Login</button></li>
+                <li><button style="padding: 5px" onclick="showRegister()">Register</button></li>
                 <li id="logoutNavItem" style="display: none;"><button onclick="logout()">Logout</button></li>
             </ul>
         </nav>
@@ -385,7 +388,7 @@
                     <h3 data-en="Support Channels" data-hi="समर्थन चैनल">Support Channels</h3>
                     <p data-en="Email: support@perfectschemes.in" data-hi="ईमेल: support@perfectschemes.in">Email: support@perfectschemes.in</p>
                     <p data-en="Phone: 1800-123-4567 (Toll-free)" data-hi="फोन: 1800-123-4567 (टोल-फ्री)">Phone: 1800-123-4567 (Toll-free)</p>
-                    <p data-en="WhatsApp: +91 98765 43210" data-hi="व्हाट्सएप: +91 98765 43210">WhatsApp: +91 98765 43210</p>
+                    <p data-en="WhatsApp: +91 70617 81744" data-hi="व्हाट्सएप: +91 70617 81744">WhatsApp: +91 70617 81744</p>
                     
                     <h3 data-en="Business Hours" data-hi="व्यवसाय घंटे">Business Hours</h3>
                     <p data-en="Monday to Friday: 9:00 AM - 6:00 PM" data-hi="सोमवार से शुक्रवार: सुबह 9:00 बजे - शाम 6:00 बजे">Monday to Friday: 9:00 AM - 6:00 PM</p>
@@ -486,10 +489,9 @@
                     </div>
                 </div>
                 
-                <div id="registerActionButtons" style="display: none;">
-                    <button type="button" id="cutButton" onclick="resetRegisterForm()" 
-                            data-en="Cut" data-hi="काटें">Cut</button>
-                    <button type="submit" id="registerButton" 
+                <div id="registerActionButtons" >
+                    
+                    <button type="submit" id="registerButton"  
                             data-en="Register" data-hi="पंजीकरण करें">Register</button>
                 </div>
                 
@@ -527,10 +529,10 @@
             <div class="footer-section">
                 <h3 data-en="Connect With Us" data-hi="हमसे जुड़ें">Connect With Us</h3>
                 <div class="social-links">
-                    <a href="#" data-en="Facebook" data-hi="फेसबुक">Facebook</a>
-                    <a href="#" data-en="Twitter" data-hi="ट्विटर">Twitter</a>
-                    <a href="#" data-en="LinkedIn" data-hi="लिंक्डइन">LinkedIn</a>
-                    <a href="#" data-en="YouTube" data-hi="यूट्यूब">YouTube</a>
+                    <a href="#" data-en="Facebook" data-hi="फेसबुक" <img src="https://tse4.mm.bing.net/th/id/OIP.WYn0K7hToJTtoaHhUsxTKwHaHY?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Person working on laptop" class="hero-image">>Facebook</a>
+                    <a href="#" data-en="Twitter" data-hi="ट्विटर" <img src="https://tse4.mm.bing.net/th/id/OIP.WYn0K7hToJTtoaHhUsxTKwHaHY?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Person working on laptop" class="hero-image">>Twitter</a>
+                    <a href="#" data-en="LinkedIn" data-hi="लिंक्डइन" <img src="https://tse4.mm.bing.net/th/id/OIP.WYn0K7hToJTtoaHhUsxTKwHaHY?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Person working on laptop" class="hero-image">>LinkedIn</a>
+                    <a href="#" data-en="YouTube" data-hi="यूट्यूब" <img src="https://tse4.mm.bing.net/th/id/OIP.WYn0K7hToJTtoaHhUsxTKwHaHY?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Person working on laptop" class="hero-image">>YouTube</a>
                 </div>
             </div>
         </div>
